@@ -31,3 +31,50 @@ This cohort builds on our initial work published in BMC Neurology and is being e
 - Belzunce MA, et al. *Cognitive impact and brain structural changes in Long COVID patients: a cross-sectional MRI study two years post infection in a cohort from Argentina.* BMC Neurology. 2024. [[Link]](https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-024-03453-1)
 
 ---
+## Code
+
+The repository includes pipelines and scripts for:
+
+- MRI preprocessing and analysis (MATLAB, Python)
+- ASL and fMRI processing (Python, MATLAB)
+- Saliva biomarker analysis (R, Python)
+- Mental health scale analysis (R)
+- Statistical modeling and visualization (R, Python)
+
+---
+
+## Data
+
+Raw neuroimaging and individual-level clinical data are **not** shared here due to privacy and ethical restrictions.  
+We provide:
+
+- aggregate cohort descriptions  
+- variable dictionaries  
+- selected derived data when permitted (e.g., group-level statistical maps, summary tables)
+
+---
+
+## License
+
+This repository is shared under the MIT License.  
+For any use of non-public data, please contact the project PI.
+
+---
+
+## How to Cite
+
+If you use this repository or any outputs of this project, please cite:
+
+> Cataldo SA, et al. *Cognitive impact and brain structural changes in Long COVID patients: a cross-sectional MRI study two years post infection in a cohort from Argentina.* BMC Neurology. 2024.
+
+and reference this GitHub repository:
+
+> Long COVID Neuroimaging Cohort. GitHub repository: [https://github.com/YOUR-USERNAME/longcovid-neuroimaging-cohort](https://github.com/YOUR-USERNAME/longcovid-neuroimaging-cohort)
+
+---
+
+## Contact
+
+Project PI: **Martín A. Belzunce**  
+CEUNIM, Universidad Nacional de San Martín (UNSAM), Argentina  
+Email: [mbelzunce@unsam.edu.ar]
