@@ -1,2 +1,33 @@
-# longcovid-neuroimaging-cohort
-Multimodal neuroimaging, biomarkers, and cognitive data, analysis and findings from a Long COVID cohort from Argentina.
+# Long COVID Neuroimaging Cohort
+
+This repository contains selected code, documentation, and derived data analysis related to the Long COVID Neuroimaging Cohort — a multimodal study carried out at Universidad Nacional de San Martín (UNSAM), Buenos Aires, Argentina.
+
+The project investigates the long-term neurological and cognitive effects of Long COVID using:
+
+- **Neuroimaging** (structural MRI, ASL, fMRI)
+- **Saliva biomarkers** of stress and inflammation (IL-6, M6a, BDNF)
+- **Mental health scales** (PHQ-9, GAD-7)
+- **Cognitive assessments**
+- **Clinical and quality-of-life data**
+
+Data collection has been supported in part by the Ministerio de Producción, Ciencia e Innovación Tecnológica International de la provincia de Buenos Aires and the Brain Research Organization (IBRO).
+
+---
+
+## Project Overview
+
+- **Participants**: ~200 Long COVID patients and healthy controls, recruited between 2023 and 2024
+- **Neuroimaging**: T1-weighted MRI, ASL perfusion imaging, functional MRI, PET in selected cases
+- **Biomarkers**: saliva markers (IL-6, M6a, BDNF), clinical metadata
+- **Cognition & Mental Health**: validated scales and neuropsychological testing
+- **Demographics and HRQoL scales**: validated scales
+
+This cohort builds on our initial work published in BMC Neurology and is being extended through additional funding and collaborations.
+
+---
+
+## Publications
+
+- Belzunce MA, et al. *Cognitive impact and brain structural changes in Long COVID patients: a cross-sectional MRI study two years post infection in a cohort from Argentina.* BMC Neurology. 2024. [[Link]](https://bmcneurol.biomedcentral.com/articles/10.1186/s12883-024-03453-1)
+
+---
