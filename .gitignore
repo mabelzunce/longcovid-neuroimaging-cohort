@@ -1,0 +1,35 @@
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore data files
+/data/*.nii.*
+!/data/README.md
+!/data/*.csv
+
+# Ignore output files
+*.log
+*.out
+*.tmp
+
+# Ignore notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore R temporary files
+.Rhistory
+.RData
+.Ruserdata
+
+# Ignore MATLAB temporary files
+*.asv
+*.autosave
+
+# Ignore environment files not intended for GitHub
+envs/.env
+.env
