@@ -3,10 +3,13 @@ import statsmodels.api as sm
 from statsmodels.formula.api import ols
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
+from scipy.stats import chi2_contingency
+
 import math, os
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 
 def plot_all_variables(df, vars_to_plot, results_anova=None, save_path=None, title=None):
     """
@@ -159,10 +162,95 @@ def cluster_data(
     }
 
 
+def run_anova(df, var):
+    """
+    Corre un ANOVA de una variable continua (var) respecto a Cluster.
+    Maneja los NaN SOLO de esa variable.
+    """
+    df = df.copy()
+    df["Cluster"] = df["Cluster"].astype(str)
+
+    # Usar solo filas válidas para la variable de interés
+    df_var = df.dropna(subset=[var])
+
+    # Ajustar modelo
+    model = ols(f"{var} ~ C(Cluster)", data=df_var).fit()
+    anova_table = sm.stats.anova_lm(model, typ=2)
+
+    print(f"\n=== ANOVA {var} ~ Cluster ===")
+    print(anova_table)
+
+    return anova_table, model
+
+
+def run_chisq_gender(df):
+    df = df.copy()
+    df["Cluster"] = df["Cluster"].astype(str)
+
+    contingency = pd.crosstab(df["Cluster"], df["Genero"])
+    chi2, p, dof, expected = chi2_contingency(contingency)
+
+    print("\n=== Chi-cuadrado Género ~ Cluster ===")
+    print("Tabla de contingencia:")
+    print(contingency, "\n")
+    print(f"Chi2 = {chi2:.3f}")
+    print(f"p-value = {p:.4f}")
+    print(f"Grados de libertad = {dof}\n")
+    print("Valores esperados (bajo independencia):")
+    print(pd.DataFrame(expected,
+                       index=contingency.index,
+                       columns=contingency.columns))
+
+    return contingency, chi2, p, dof, expected
+
+
+def plot_age_gender_bmi(df, save_path=None):
+    df = df.copy()
+    df["Cluster"] = df["Cluster"].astype(str)
+
+    fig, axes = plt.subplots(1, 3, figsize=(18, 5))
+
+    # --- Boxplot Edad ---
+    sns.boxplot(x="Cluster", y="Edad", data=df,
+                palette="Set2", order=["1", "2", "CONTROL"], ax=axes[0])
+    sns.swarmplot(x="Cluster", y="Edad", data=df,
+                  color="black", alpha=0.6, size=3,
+                  order=["1", "2", "CONTROL"], ax=axes[0])
+    axes[0].set_title("Edad por Cluster", fontsize=14, weight="bold")
+    axes[0].set_xlabel("")
+    axes[0].set_ylabel("Edad")
+
+    # --- Barplot % Género ---
+    sns.barplot(x="Cluster", y="Genero_Perc", hue="Genero", data=df,
+                palette="Set2", order=["1", "2", "CONTROL"], ax=axes[1])
+    axes[1].set_title("% Género por Cluster", fontsize=14, weight="bold")
+    axes[1].set_xlabel("")
+    axes[1].set_ylabel("%")
+
+    # --- Boxplot BMI ---
+    sns.boxplot(x="Cluster", y="BMI", data=df,
+                palette="Set2", order=["1", "2", "CONTROL"], ax=axes[2])
+    sns.swarmplot(x="Cluster", y="BMI", data=df,
+                  color="black", alpha=0.6, size=3,
+                  order=["1", "2", "CONTROL"], ax=axes[2])
+    axes[2].set_title("BMI por Cluster", fontsize=14, weight="bold")
+    axes[2].set_xlabel("")
+    axes[2].set_ylabel("BMI")
+
+    plt.tight_layout()
+    if save_path:
+        plt.savefig(save_path, dpi=300)
+        print(f"✅ Gráfico guardado en {save_path}")
+
+
+
+
+
 # === Paths ===
 path_data_analysis = "/mnt/d87cc26d-5470-443c-81c1-e09b68ee4730/Sol/COVID/Freesurfer/DataAnalysis/"
 path_results_data_analysis = os.path.join(path_data_analysis, "Results")
 path_plots_data_analysis = os.path.join(path_data_analysis, "Plots/")
+path_cuestionarios = os.path.join(path_data_analysis, "ResumenTotal_2_06.csv")
 
 # Input
 matrix_path = os.path.join(path_results_data_analysis, "matrix_kmeans.csv")
@@ -305,6 +393,45 @@ plot_all_variables(df_clusters, tests_vars, results_anova,
 
 # Save final clustered matrix
 df_clusters.to_csv(cluster_matrix, index=False)
+
+## Demographics
+
+# === Merge con cuestionarios ===
+df_cuestionarios = pd.read_csv(path_cuestionarios)
+
+df_merged = pd.merge(df_cuestionarios, df_clusters, on="ID", how="inner")
+
+# Calcular % de género por cluster
+gender_perc = (
+    df_merged.groupby(["Cluster", "Genero"])
+             .size()
+             .reset_index(name="count")
+)
+gender_perc["Genero_Perc"] = gender_perc.groupby("Cluster")["count"].transform(
+    lambda x: 100 * x / x.sum()
+)
+
+df_merged = df_merged.merge(
+    gender_perc[["Cluster", "Genero", "Genero_Perc"]],
+    on=["Cluster", "Genero"], how="left"
+)
+
+# ANOVAs
+anova_edad, model_edad = run_anova(df_merged, "Edad")
+anova_bmi, model_bmi   = run_anova(df_merged, "BMI")
+
+# Chi-square para Género
+contingency, chi2, p, dof, expected = run_chisq_gender(df_merged)
+
+# Caso especial: setear BMI en NaN para CP0171
+df_merged.loc[df_merged["ID"] == "CP0171", "BMI"] = np.nan
+
+# Plot Edad + Género + BMI
+plot_age_gender_bmi(
+    df_merged,
+    save_path=os.path.join(path_plots_data_analysis, "edad_genero_bmi.png")
+)
+
 
 
 
