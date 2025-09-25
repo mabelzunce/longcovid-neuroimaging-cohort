@@ -160,7 +160,7 @@ def cluster_data(
 
 
 # === Paths ===
-path_data_analysis = "/mnt/d87cc26d-5470-443c-81c1-e09b68ee4730/Sol/COVID/Freesurfer/DataAnalysis/"
+path_data_analysis = "../../../data/kmeans_analysis/"
 path_results_data_analysis = os.path.join(path_data_analysis, "Results")
 path_plots_data_analysis = os.path.join(path_data_analysis, "Plots/")
 
