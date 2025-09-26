@@ -247,13 +247,18 @@ def plot_age_gender_bmi(df, save_path=None):
 
 
 # === Paths ===
-path_data_analysis = "../../../data/kmeans_analysis/"
-path_results_data_analysis = os.path.join(path_data_analysis, "Results")
-path_plots_data_analysis = os.path.join(path_data_analysis, "Plots/")
-path_cuestionarios = os.path.join(path_data_analysis, "ResumenTotal_2_06.csv")
+path_data_analysis = os.path.abspath("../../../../data/")
+path_results_data_analysis = os.path.join(path_data_analysis, "results")
+path_plots_data_analysis = os.path.join(path_data_analysis, "plots/")
+path_cuestionarios = os.path.join(path_data_analysis, "study_summary.xlsx")
+
+if not os.path.exists(path_results_data_analysis):
+    os.makedirs(path_results_data_analysis)
+if not os.path.exists(path_plots_data_analysis):
+    os.makedirs(path_plots_data_analysis)
 
 # Input
-matrix_path = os.path.join(path_results_data_analysis, "matrix_kmeans.csv")
+matrix_path = os.path.join(path_data_analysis, "kmeans_analysis/matrix_kmeans.csv")
 
 # Outputs
 cluster_matrix = os.path.join(path_results_data_analysis, "cluster_data.csv")
@@ -327,6 +332,9 @@ numeric_vars = [
     and pd.api.types.is_numeric_dtype(df_clusters[c])
 ]
 
+# Save CSV with ID, Group, and Cluster
+clusters_ids = df_clusters[["ID", "Grupo", "Cluster"]]
+clusters_ids.to_csv(os.path.join(path_results_data_analysis, "clusters_ids.csv"), index=False)
 
 # === Run ANOVA and Tukey ===
 results_anova = []
