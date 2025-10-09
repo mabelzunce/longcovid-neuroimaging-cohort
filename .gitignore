@@ -33,3 +33,10 @@ __pycache__/
 # Ignore environment files not intended for GitHub
 envs/.env
 .env
+.idea/.gitignore
+.idea/longcovid-neuroimaging-cohort.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml

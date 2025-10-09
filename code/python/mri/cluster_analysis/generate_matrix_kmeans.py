@@ -22,8 +22,11 @@ path_gray_matter_perfusion = "/mnt/d87cc26d-5470-443c-81c1-e09b68ee4730/Sol/COVI
 path_scov_without_pvc = "/mnt/d87cc26d-5470-443c-81c1-e09b68ee4730/Sol/COVID/ASL_BIDS/ASLProcessedCOVID/derivatives/ExploreASL/Population/Stats/CoV_qCBF_StandardSpace_TotalGM_n=203_15-Jan-2025_PVC0.tsv"
 
 # IDs a excluir
-values_to_exclude = ['CP0011', 'CP0015', 'CP0035', 'CP0144', 'CP0106',
-                     'CP0192', 'CP0193', 'CP0087', 'CP0196']
+values_to_exclude_from_the_study = ['CP0011', 'CP0015', 'CP0106', 'CP0087', 'CP0144', 'CP0193']
+
+values_to_exclude_mri = ['CP0035', 'CP0192', 'CP0196']
+# Concatenate lists
+values_to_exclude = list(set(values_to_exclude_from_the_study) | set(values_to_exclude_mri))
 
 # === Leer Cuestionarios ===
 cuestionarios_excel = pd.read_csv(path_cuestionarios)
