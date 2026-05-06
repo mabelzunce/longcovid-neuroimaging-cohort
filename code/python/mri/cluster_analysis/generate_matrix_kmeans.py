@@ -3,23 +3,24 @@ import numpy as np
 import re
 
 # Paths
-path_data_analysis = "/mnt/d87cc26d-5470-443c-81c1-e09b68ee4730/Sol/COVID/Freesurfer/DataAnalysis/"
-path_results_data_analysis = path_data_analysis + "Results/"
-path_plots_data_analysis = path_data_analysis + "Plots/"
+path_data_analysis = "/home/martin/data/UNSAM/CovidProject/longcovid-neuroimaging-cohort/data/"
+path_structural_mri = path_data_analysis + "processed_mri/structural/"
+path_results_data_analysis = path_data_analysis + "results/"
+path_plots_data_analysis = path_results_data_analysis + "plots/"
 
-path_cuestionarios = path_data_analysis + "ResumenTotal_2_06.csv"
-path_sienax2 = path_data_analysis + "SienaxResults2.csv"
-path_brain_vol = path_data_analysis + "brain_volumes.csv"
-path_segmentation = path_data_analysis + "segmentation.csv"
-path_parcellation = path_data_analysis + "parcellation.csv"
-path_parcellation_DKT = path_data_analysis + "parcellation_DKT.csv"
-path_parcellation_thick = path_data_analysis + "parcellation_thick.csv"
-path_parcellation_thick_dkt = path_data_analysis + "parcellation_thick_DKT.csv"
+path_cuestionarios = path_data_analysis + "study_summary.csv"
+path_sienax2 = path_structural_mri + "sienax_results.csv"
+path_brain_vol = path_structural_mri + "brain_volumes.csv"
+path_segmentation = path_structural_mri + "segmentation.csv"
+path_parcellation = path_structural_mri + "parcellation.csv"
+path_parcellation_DKT = path_structural_mri + "parcellation_DKT.csv"
+path_parcellation_thick = path_structural_mri + "parcellation_thick.csv"
+path_parcellation_thick_dkt = path_structural_mri + "parcellation_thick_DKT.csv"
 
-path_bianca_file = "/mnt/d87cc26d-5470-443c-81c1-e09b68ee4730/Sol/COVID/WMH/ProcessedWMH/TotalPvAndDeepValuesBiancaThr0_7.csv"
-path_socioeconomics_cardiovascular_index = path_data_analysis + "ASL/SocialAndCardiovascularIndex.csv"
-path_gray_matter_perfusion = "/mnt/d87cc26d-5470-443c-81c1-e09b68ee4730/Sol/COVID/ASL_BIDS/ASLProcessedCOVID/derivatives/ExploreASL/Population/Stats/mean_qCBF_StandardSpace_TotalGM_n=203_15-Jan-2025_PVC2.tsv"
-path_scov_without_pvc = "/mnt/d87cc26d-5470-443c-81c1-e09b68ee4730/Sol/COVID/ASL_BIDS/ASLProcessedCOVID/derivatives/ExploreASL/Population/Stats/CoV_qCBF_StandardSpace_TotalGM_n=203_15-Jan-2025_PVC0.tsv"
+path_bianca_file = path_data_analysis + "processed_mri/wmh/TotalPvAndDeepValuesBiancaThr0_7.csv"
+path_socioeconomics_cardiovascular_index = path_data_analysis + "social_and_cardiovascular_indices.csv"
+path_gray_matter_perfusion = path_data_analysis + "processed_mri/asl/cbf_total_gm_clean.csv"
+path_scov_without_pvc = path_data_analysis + "processed_mri/asl/scov_total_gm_clean.csv"
 
 # IDs a excluir
 values_to_exclude_from_the_study = ['CP0011', 'CP0015', 'CP0106', 'CP0087', 'CP0144', 'CP0193']
@@ -58,10 +59,10 @@ vascular_artifacts = [
 
 # === CBF (PVC2) ===
 
-perfusion_csv = pd.read_csv(path_gray_matter_perfusion, sep="\t")
+perfusion_csv = pd.read_csv(path_gray_matter_perfusion, sep=",")
 
 # Eliminar primera fila como en R [-1, ]
-perfusion_csv = perfusion_csv.iloc[1:, :]
+#perfusion_csv = perfusion_csv.iloc[1:, :]
 
 # Limpiar participant_id
 perfusion_csv["participant_id"] = (
@@ -73,24 +74,28 @@ perfusion_csv["participant_id"] = (
 # Reemplazar "n/a" por NaN
 perfusion_csv = perfusion_csv.replace("n/a", np.nan)
 
+print("perfusion_csv columns:", perfusion_csv.columns.tolist())
+
 # Convertir TotalGM_B a numérico
 perfusion_csv["TotalGM_B"] = pd.to_numeric(perfusion_csv["TotalGM_B"], errors="coerce")
 
 # Setear NA en artefactos
+print("IDs con artefactos vasculares:", vascular_artifacts)
+print("IDs en perfusion_csv:", perfusion_csv["participant_id"].tolist())
 perfusion_csv.loc[perfusion_csv["participant_id"].isin(vascular_artifacts), "TotalGM_B"] = np.nan
 
 
 # === sCOV (PVC0) ===
 
-perfusion_scov_without_pvc = pd.read_csv(path_scov_without_pvc, sep="\t")
-perfusion_scov_without_pvc = perfusion_scov_without_pvc.iloc[1:, :]
+perfusion_scov_without_pvc = pd.read_csv(path_scov_without_pvc, sep=",")
+#perfusion_scov_without_pvc = perfusion_scov_without_pvc.iloc[1:, :]
 
 # Limpiar participant_id
-perfusion_scov_without_pvc["participant_id"] = (
-    perfusion_scov_without_pvc["participant_id"]
-    .str.replace("^sub-", "", regex=True)
-    .str.replace("_1$", "", regex=True)
-)
+#perfusion_scov_without_pvc["participant_id"] = (
+#    perfusion_scov_without_pvc["participant_id"]
+#    .str.replace("^sub-", "", regex=True)
+#    .str.replace("_1$", "", regex=True)
+#)
 
 # Reemplazar "n/a" por NaN
 perfusion_scov_without_pvc = perfusion_scov_without_pvc.replace("n/a", np.nan)

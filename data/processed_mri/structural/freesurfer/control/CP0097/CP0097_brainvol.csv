@@ -1,0 +1,19 @@
+Region,Volume,Units
+Brain Segmentation Volume,1101985.000000000000,mm^3
+Brain Segmentation Volume Without Ventricles,1076780.000000000000,mm^3
+Supratentorial volume,977815.000000000000,mm^3
+Supratentorial volume NotVent,952610.000000000000,mm^3
+Subcortical gray matter volume,54754.000000000000,mm^3
+Left hemisphere cortical gray matter volume,227120.941312230047,mm^3
+Right hemisphere cortical gray matter volume,225943.018275181064,mm^3
+Total cortical gray matter volume,453063.959587411140,mm^3
+Total gray matter volume,608208.959587411140,mm^3
+Left hemisphere cerebral white matter volume,224664.500000000000,mm^3
+Right hemisphere cerebral white matter volume,220676.500000000000,mm^3
+Total cerebral white matter volume,445341.000000000000,mm^3
+Mask Volume,1512405.000000000000,mm^3
+Supratentorial volume voxel count,952610.000000000000,mm^3
+Brain Segmentation Volume Without Ventricles from Surf,1076780.000000000000,mm^3
+Volume of ventricles and choroid plexus,21976.000000000000,mm^3
+Estimated Total Intracranial Volume,1424338.666004,mm^3
+Mean Thickness,2.496645,mm
