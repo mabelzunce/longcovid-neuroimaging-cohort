@@ -1,0 +1,3 @@
+group,n_frontal_rois,within_frontal_mean_corr,within_frontal_mean_abs_corr,frontal_to_nonfrontal_mean_corr,frontal_to_nonfrontal_mean_abs_corr
+Control_CERMEP,24.0,0.2232007810632019,0.2768602161179136,0.0619922303957974,0.2108611826071464
+LongCOVID,24.0,0.35038123454803377,0.40037753724152303,0.06422970668531543,0.2589518075192368

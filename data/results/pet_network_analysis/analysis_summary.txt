@@ -1,0 +1,10 @@
+PET intersubject network analysis completed
+Input CSV: /home/martin/data/UNSAM/CovidProject/longcovid-neuroimaging-cohort/data/processed_pet/PET_CERMEP_CEUNIM_harmonized.csv
+N controls at CERMEP (raw rows): 37
+N long COVID (raw rows): 27
+N controls used after NA filtering: 37
+N long COVID used after NA filtering: 27
+N ROIs used: 92
+Threshold density for graph metrics: 0.2
+Permutation tests (metrics): 1000
+Permutation tests (edges): 500
