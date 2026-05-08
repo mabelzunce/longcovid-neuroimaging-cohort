@@ -40,3 +40,11 @@ envs/.env
 .idea/vcs.xml
 .idea/inspectionProfiles/profiles_settings.xml
 .idea/inspectionProfiles/Project_Default.xml
+data/processed_pet/.~lock.PET_CERMEP_CEUNIM_harmonized.csv#
+data/processed_mri/asl/.~lock.cbf_total_gm_clean.csv#
+.venv/lib64
+.venv/pyvenv.cfg
+.venv/bin/python
+.venv/bin/python3
+.venv/bin/python3.10
+.vscode/settings.json

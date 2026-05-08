@@ -250,7 +250,7 @@ def plot_age_gender_bmi(df, save_path=None):
 path_data_analysis = os.path.abspath("../../../../data/")
 path_results_data_analysis = os.path.join(path_data_analysis, "results")
 path_plots_data_analysis = os.path.join(path_data_analysis, "plots/")
-path_cuestionarios = os.path.join(path_data_analysis, "study_summary.xlsx")
+path_cuestionarios = os.path.join(path_data_analysis, "study_summary.csv")
 
 if not os.path.exists(path_results_data_analysis):
     os.makedirs(path_results_data_analysis)
@@ -258,7 +258,7 @@ if not os.path.exists(path_plots_data_analysis):
     os.makedirs(path_plots_data_analysis)
 
 # Input
-matrix_path = os.path.join(path_data_analysis, "kmeans_analysis/matrix_kmeans.csv")
+matrix_path = os.path.join(path_data_analysis, "cluster_analysis/matrix_kmeans.csv")
 
 # Outputs
 cluster_matrix = os.path.join(path_results_data_analysis, "cluster_data.csv")

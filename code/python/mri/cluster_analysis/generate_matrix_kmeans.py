@@ -5,6 +5,7 @@ import re
 # Paths
 path_data_analysis = "/home/martin/data/UNSAM/CovidProject/longcovid-neuroimaging-cohort/data/"
 path_structural_mri = path_data_analysis + "processed_mri/structural/"
+output_path_matrix = path_data_analysis + "cluster_analysis/matrix_kmeans.csv"
 path_results_data_analysis = path_data_analysis + "results/"
 path_plots_data_analysis = path_results_data_analysis + "plots/"
 
@@ -233,5 +234,5 @@ matrix_kmeans.loc[matrix_kmeans["ID"].isin(ids_to_nan_scov), "TotalGM_sCOV"] = n
 
 
 # Definir path donde guardar
-output_path_matrix = f"{path_results_data_analysis}/matrix_kmeans.csv"
+output_path_matrix = output_path_matrix#f"{path_results_data_analysis}/matrix_kmeans.csv"
 matrix_kmeans.to_csv(output_path_matrix, index=False)
