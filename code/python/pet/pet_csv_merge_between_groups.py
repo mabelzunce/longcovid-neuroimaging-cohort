@@ -209,6 +209,9 @@ def sanitize_filename(name):
 
 
 def plot_structures_per_file(df, dataset_name):
+    # Create a subfolder to sabe the plots for each dataset
+    plots_path = os.path.join(merged_summary_csv_path, dataset_name)
+    os.makedirs(plots_path, exist_ok=True)
     structure_columns = [col for col in df.columns if col not in ['ID', 'group', 'site', 'age', 'sex', 'weight']]
 
     for structure in structure_columns:
@@ -258,7 +261,7 @@ def plot_structures_per_file(df, dataset_name):
         plt.tight_layout()
 
         filename = f'{dataset_name}_{sanitize_filename(structure)}.png'
-        plt.savefig(os.path.join(merged_summary_csv_path, filename), dpi=150)
+        plt.savefig(os.path.join(plots_path, filename), dpi=150)
         plt.close(fig)
 
 
