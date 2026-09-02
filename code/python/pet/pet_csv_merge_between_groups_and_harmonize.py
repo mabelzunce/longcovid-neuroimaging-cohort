@@ -1,4 +1,5 @@
 import os
+import site
 import subprocess
 import sys
 import shlex
@@ -96,19 +97,23 @@ unsam_ids = set(df_summary_controls_unsam['ID'])
 df_demographics_controls_unsam = df_demographics_controls_unsam[df_demographics_controls_unsam['anonimizado'].isin(unsam_ids)]
 # Get fields: Edad,Genero,Altura ,Peso
 df_demographics_controls_unsam = df_demographics_controls_unsam[['anonimizado', 'edad', 'sexo', 'peso']]
+# Rename anonimizado to ID
+#df_demographics_controls_unsam.rename(columns={'anonimizado': 'ID'}, inplace=True)
 # Rename to age', 'sex', 'weight
 df_demographics_controls_unsam.rename(columns={'edad': 'age', 'sexo': 'sex', 'peso': 'weight'}, inplace=True)
 df_demographics_controls_unsam['age'] = pd.to_numeric(df_demographics_controls_unsam['age'], errors='coerce')
 df_demographics_controls_unsam['weight'] = pd.to_numeric(df_demographics_controls_unsam['weight'], errors='coerce')
 df_demographics_controls_unsam['sex'] = df_demographics_controls_unsam['sex'].astype(str).str.strip()
+
 # Leave only the IDS with PET data, i.e., those that are in the summary csv files
 # Add these fields to the summary dataframes after the ID column
 df_summary_controls_unsam = pd.merge(df_summary_controls_unsam, df_demographics_controls_unsam, left_on='ID', right_on='anonimizado', how='left')
 df_summary_suvr_mean_controls_unsam = pd.merge(df_summary_suvr_mean_controls_unsam, df_demographics_controls_unsam, left_on='ID', right_on='anonimizado', how='left')
 df_summary_suvr_cerebellum_controls_unsam = pd.merge(df_summary_suvr_cerebellum_controls_unsam, df_demographics_controls_unsam, left_on='ID', right_on='anonimizado', how='left')
-
-
-
+# Remove anonimizado column after merge
+df_summary_controls_unsam.drop(columns=['anonimizado'], inplace=True)
+df_summary_suvr_mean_controls_unsam.drop(columns=['anonimizado'], inplace=True)
+df_summary_suvr_cerebellum_controls_unsam.drop(columns=['anonimizado'], inplace=True)
 
 
 
@@ -171,6 +176,46 @@ demographics_summary = df_summary.groupby(['group', 'site']).agg(
     sex_counts=('sex', lambda x: x.value_counts().to_dict())
 ).reset_index()
 demographics_summary.to_csv(os.path.join(merged_summary_csv_path, 'demographics_summary.csv'), index=False)
+
+# Now harmonize the SUVR values for each structure in the summary_suvr_mean and summary_suvr_cerebellum dataframes, using neuroharmonize
+from neuroHarmonize import harmonizationLearn
+def harmonize_suvr(df, reference_group='CEUNIM'):
+    # The harmonization model requires numeric feature values and matching row counts between the
+    # SUVR matrix and the demographic covariates. Drop incomplete demographics and any non-feature
+    # metadata columns that survive a previous merge (e.g. 'anonimizado').
+    df = df.copy()
+    metadata_cols = {'ID', 'group', 'site', 'age', 'sex', 'weight', 'anonimizado'}
+
+    df['sex'] = df['sex'].astype(str).str.strip().str.upper()
+    df['sex'] = df['sex'].map({'F': 0, 'M': 1, 'FEMALE': 0, 'MALE': 1})
+
+    # Keep only the numeric regional uptake measures; metadata columns are not valid predictors.
+    suvr_columns = [col for col in df.columns if col not in metadata_cols]
+    feature_df = df[suvr_columns].apply(pd.to_numeric, errors='coerce')
+
+    suvr_values = feature_df.to_numpy(dtype=float)
+    covars = df[['age', 'sex', 'weight', 'site']].copy()
+    covars['site'] = covars['site'].astype(str).str.strip()
+    covars = covars.rename(columns={'site': 'SITE'})
+    covars['SITE'] = covars['SITE'].astype('category')
+    covars['sex'] = covars['sex'].astype(float)
+    covars['age'] = pd.to_numeric(covars['age'], errors='coerce')
+    covars['weight'] = pd.to_numeric(covars['weight'], errors='coerce')
+
+
+    # run harmonization and store the adjusted data
+    my_model, suvr_values_harmonized = harmonizationLearn(suvr_values, covars, ref_batch=reference_group)
+    # Create a new dataframe with the harmonized SUVR values
+    df_harmonized = df.copy()
+    df_harmonized[suvr_columns] = suvr_values_harmonized
+    return df_harmonized
+
+# Harmonize the SUVR values for each structure in the summary_suvr_mean and summary_suvr_cerebellum dataframes
+df_summary_suvr_mean_harmonized = harmonize_suvr(df_summary_suvr_mean, reference_group='CEUNIM')
+df_summary_suvr_cerebellum_harmonized = harmonize_suvr(df_summary_suvr_cerebellum, reference_group='CEUNIM')
+# Write the harmonized summary dataframes to csv files
+df_summary_suvr_mean_harmonized.to_csv(os.path.join(merged_summary_csv_path, 'summary_suvr_mean_harmonized.csv'), index=False)
+df_summary_suvr_cerebellum_harmonized.to_csv(os.path.join(merged_summary_csv_path, 'summary_suvr_cerebellum_harmonized.csv'), index=False)
 
 # Plot the distribution of age, sex and weight for both groups, in a single figure with three subplots, one for each variable, and save the figure to the merged_summary_csv_path
 import matplotlib.pyplot as plt
