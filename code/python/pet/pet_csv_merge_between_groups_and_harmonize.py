@@ -162,6 +162,15 @@ df_summary_suvr_cerebellum.insert(1, 'group', ['LC' if id in df_summary_suvr_cer
 df_summary.insert(2, 'site', ['CEUNIM' if id in df_summary_unsam['ID'].values or id in df_summary_controls_unsam['ID'].values else 'CERMEP' for id in df_summary['ID']])
 df_summary_suvr_mean.insert(2, 'site', ['CEUNIM' if id in df_summary_suvr_mean_unsam['ID'].values or id in df_summary_suvr_mean_controls_unsam['ID'].values else 'CERMEP' for id in df_summary_suvr_mean['ID']])
 df_summary_suvr_cerebellum.insert(2, 'site', ['CEUNIM' if id in df_summary_suvr_cerebellum_unsam['ID'].values or id in df_summary_suvr_cerebellum_controls_unsam['ID'].values else 'CERMEP' for id in df_summary_suvr_cerebellum['ID']])
+
+# Now move the age, sex and weight columns to be after the site column
+age_col = df_summary.pop('age')
+sex_col = df_summary.pop('sex')
+weight_col = df_summary.pop('weight')
+df_summary.insert(3, 'age', age_col)
+df_summary.insert(4, 'sex', sex_col)
+df_summary.insert(5, 'weight', weight_col)
+
 # Write the merged summary dataframes to csv files  
 df_summary.to_csv(os.path.join(merged_summary_csv_path, summary_uptake_csv_filename), index=False)
 df_summary_suvr_mean.to_csv(os.path.join(merged_summary_csv_path, summary_suvr_mean_csv_filename), index=False)
@@ -179,11 +188,11 @@ demographics_summary.to_csv(os.path.join(merged_summary_csv_path, 'demographics_
 
 # Now harmonize the SUVR values for each structure in the summary_suvr_mean and summary_suvr_cerebellum dataframes, using neuroharmonize
 from neuroHarmonize import harmonizationLearn
-def harmonize_suvr(df, reference_group='CEUNIM'):
+def harmonize_suvr(df_input, reference_group='CEUNIM'):
     # The harmonization model requires numeric feature values and matching row counts between the
     # SUVR matrix and the demographic covariates. Drop incomplete demographics and any non-feature
     # metadata columns that survive a previous merge (e.g. 'anonimizado').
-    df = df.copy()
+    df = df_input.copy()
     metadata_cols = {'ID', 'group', 'site', 'age', 'sex', 'weight', 'anonimizado'}
 
     df['sex'] = df['sex'].astype(str).str.strip().str.upper()
@@ -194,7 +203,7 @@ def harmonize_suvr(df, reference_group='CEUNIM'):
     feature_df = df[suvr_columns].apply(pd.to_numeric, errors='coerce')
 
     suvr_values = feature_df.to_numpy(dtype=float)
-    covars = df[['age', 'sex', 'weight', 'site']].copy()
+    covars = df[['age', 'sex', 'site']].copy() # do not include weight
     covars['site'] = covars['site'].astype(str).str.strip()
     covars = covars.rename(columns={'site': 'SITE'})
     covars['SITE'] = covars['SITE'].astype('category')
@@ -202,11 +211,12 @@ def harmonize_suvr(df, reference_group='CEUNIM'):
     covars['age'] = pd.to_numeric(covars['age'], errors='coerce')
     covars['weight'] = pd.to_numeric(covars['weight'], errors='coerce')
 
-
+    # Write covars for debugging
+    covars.to_csv(os.path.join(merged_summary_csv_path, 'covars_for_harmonization.csv'), index=False)
     # run harmonization and store the adjusted data
     my_model, suvr_values_harmonized = harmonizationLearn(suvr_values, covars, ref_batch=reference_group)
     # Create a new dataframe with the harmonized SUVR values
-    df_harmonized = df.copy()
+    df_harmonized = df_input.copy()
     df_harmonized[suvr_columns] = suvr_values_harmonized
     return df_harmonized
 

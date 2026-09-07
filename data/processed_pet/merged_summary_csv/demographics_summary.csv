@@ -1,4 +1,4 @@
 group,site,age_median,age_std,weight_median,weight_iqr,sex_counts
 Controls,CERMEP,35.0,11.359733427486034,70.0,21.0,"{'F': 20, 'M': 17}"
 Controls,CEUNIM,69.0,15.426450810714192,71.5,21.0,"{'F': 16, 'M': 10}"
-LC,CEUNIM,46.0,9.748255742874722,78.0,26.049999999999997,"{'F': 18, 'M': 9}"
+LC,CEUNIM,45.5,9.588628626753614,79.0,29.25,"{'F': 18, 'M': 10}"

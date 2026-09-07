@@ -1,0 +1,189 @@
+term,coef,se,z,p
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-lateral-remainder-occipital-lobe-R]",1.4932610316202124,0.03886102578929904,38.425672027201195,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-cuneus-R]",2.2416875647716865,0.03886102578929903,57.684724456989734,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-cuneus-L]",2.113571233514909,0.03886102578929902,54.38794243297904,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-lingual-gyrus-R]",1.6799722054716533,0.03886102578929906,43.230258886636435,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.CG-posterior-cingulate-gyrus-L]",1.9168520659188564,0.03886102578929902,49.32582264585231,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.CG-posterior-cingulate-gyrus-R]",1.788980467160551,0.03886102578929906,46.03533825535744,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-lateral-orbital-gyrus-L]",1.4987288118300728,0.03886102578929903,38.56637289905946,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-lateral-orbital-gyrus-R]",1.4725076382926416,0.03886102578929904,37.8916307118717,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-middle-frontal-gyrus-L]",1.7040464135563824,0.03886102578929909,43.849753807209446,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-middle-frontal-gyrus-R]",1.68476036159824,0.03886102578929904,43.35347118042787,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-lingual-gyrus-L]",1.5734454304879422,0.038861025789299036,40.48903492715351,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-inferior-frontal-gyrus-R]",1.5929762061929449,0.03886102578929904,40.99161496224823,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.putamen-L]",2.238812592771797,0.03886102578929903,57.610743599781344,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.putamen-R]",2.2054234296123805,0.03886102578929908,56.75154952342186,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-angular-gyrus-R]",1.5962823844088594,0.038861025789299085,41.0766919294348,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-angular-gyrus-L]",1.6377636966172997,0.038861025789299015,42.14411903322128,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-anterior-orbital-gyrus-R]",1.5504267463845078,0.03886102578929907,39.89670151248142,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-inferior-frontal-gyrus-L]",1.6380406681510618,0.03886102578929904,42.15124626489197,0.0
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-lateral-remainder-occipital-lobe-L]",1.4607566239195917,0.038861025789299064,37.589245117709474,3.221682236876893e-309
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-short-gyrus-R]",1.4280400569634408,0.03886102578929906,36.747358772929566,1.2812256537694865e-295
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.thalamus-R]",1.412546260578191,0.038861025789299064,36.34866120716648,2.758816895643725e-289
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-superior-parietal-gyrus-L]",1.3903321534433384,0.03886102578929903,35.77703174850797,2.5141844338152927e-280
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-anterior-orbital-gyrus-L]",1.3787828906995088,0.038861025789299036,35.4798377730723,1.0059250942725114e-275
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-superior-parietal-gyrus-R]",1.3013235186526892,0.038861025789299036,33.486597232619324,7.553487196028661e-246
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.thalamus-L]",1.2827543548584628,0.03886102578929904,33.0087620901579,6.081003773369401e-239
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.caudate-nucleus-R]",1.2714907036638872,0.038861025789299036,32.718917677515634,8.406734633067918e-235
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.caudate-nucleus-L]",1.2588234747749174,0.038861025789299015,32.39295538929273,3.449084672928931e-230
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-short-gyrus-L]",1.2547248424752564,0.03886102578929906,32.28748642092621,1.0482094906733079e-228
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-superior-frontal-gyrus-R]",1.2479111793702344,0.03886102578929903,32.11215231775651,2.983432478367226e-226
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-superior-frontal-gyrus-L]",1.2203104991552656,0.03886102578929903,31.401911667789697,1.905377607128562e-216
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-precentral-gyrus-R]",1.1846465920607663,0.03886102578929907,30.484182236562972,4.223242307050849e-204
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-medial-orbital-gyrus-R]",1.1820681078850122,0.038861025789299015,30.41783081831342,3.192038727540274e-203
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-precentral-gyrus-L]",1.1790819002409887,0.03886102578929906,30.3409875651215,3.303727421550876e-202
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-supramarginal-gyrus-L]",1.1658995708319406,0.03886102578929906,30.00177033805906,9.305271328430508e-198
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-supramarginal-gyrus-R]",1.1606387942263343,0.03886102578929906,29.866396232544457,5.377496807833784e-196
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-medial-orbital-gyrus-L]",1.159191727214977,0.038861025789299,29.829159258430558,1.6361134807739954e-195
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.pallidum-R]",1.1190462497773017,0.03886102578929909,28.79610682035692,2.3997607024515007e-182
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-middle-short-gyrus-R]",1.118755910213661,0.038861025789299064,28.788635592880475,2.976482529210465e-182
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-postcentral-gyrus-L]",1.1101714366843627,0.03886102578929904,28.567733716130178,1.69170345081892e-179
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-postcentral-gyrus-R]",1.104774829068924,0.03886102578929903,28.428864308907166,8.895573224176775e-178
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-posterior-orbital-gyrus-R]",1.0943374652899318,0.03886102578929903,28.160282521190528,1.7933571159129757e-174
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-superior-temporal-gyrus-middle-part-R]",1.0786299883653072,0.03886102578929907,27.756086373363903,1.471342125260257e-169
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-posterior-orbital-gyrus-L]",1.0673302386098267,0.038861025789299036,27.46531304646446,4.5602550695560964e-166
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-posterior-temporal-lobe-R]",1.0651224248220272,0.03886102578929907,27.408499986516663,2.17196718927204e-165
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-superior-temporal-gyrus-middle-part-L]",1.0557903411774658,0.03886102578929903,27.168360065991713,1.5367903850731725e-162
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-posterior-temporal-lobe-L]",1.0178217881947722,0.03886102578929899,26.19132582123053,3.3364347283806857e-151
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-pre-subgenual-frontal-cortex-L]",1.0129569442877584,0.038861025789299036,26.066140142051815,8.828967426534094e-150
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.nucleus-accumbens-L]",1.0044447412354516,0.03886102578929906,25.84709798144443,2.6229264819050717e-147
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-straight-gyrus-R]",1.000973882711769,0.03886102578929907,25.75778334156586,2.6371332509399945e-146
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-middle-and-inferior-temporal-gyrus-R]",0.9792874379915643,0.038861025789299036,25.19973207349626,4.0328423716734095e-140
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-middle-short-gyrus-L]",0.9743391840586934,0.03886102578929907,25.07240002725279,9.949903712770775e-139
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-straight-gyrus-L]",0.9709809086294786,0.038861025789299064,24.985982456923512,8.683124369413753e-138
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.nucleus-accumbens-R]",0.9532281834624139,0.0388610257892991,24.529156503246448,7.219235055135633e-133
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.Lateral-ventricle-excluding-temporal-horn-R]",-0.9369494769952936,0.03886102578929909,-24.11026106401173,1.9511243790612006e-128
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.Lateral-ventricle-excluding-temporal-horn-L]",-0.898922945964491,0.03886102578929906,-23.131734886216574,2.2202159841409575e-118
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-middle-and-inferior-temporal-gyrus-L]",0.8808555237257607,0.038861025789298995,22.66681092006373,9.524923257503756e-114
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.CG-anterior-cingulate-gyrus-L]",0.8669420333642166,0.03886102578929899,22.308778930970554,3.0367278914096133e-110
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-posterior-short-gyrus-R]",0.8581696036611186,0.03886102578929906,22.083040430122356,4.600712856940113e-108
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.Lateral-ventricle-temporal-horn-R]",-0.785438200209639,0.03886102578929903,-20.211463394409964,7.761244867072652e-91
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-posterior-short-gyrus-L]",0.7814516030485631,0.03886102578929906,20.10887739519596,6.170455715098699e-90
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.CG-anterior-cingulate-gyrus-R]",0.7522932364161614,0.03886102578929904,19.35855323261478,1.7266697228866107e-83
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.pallidum-L]",0.745869046432945,0.03886102578929906,19.193241333282838,4.2151080545582605e-82
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-long-gyrus-R]",0.7190927078613126,0.038861025789299064,18.504213238224015,1.9094667134000475e-76
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.Lateral-ventricle-temporal-horn-L]",-0.7171962832291235,0.038861025789299064,-18.455413069065557,4.7174457085223645e-76
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-pre-subgenual-frontal-cortex-R]",0.716505718383533,0.038861025789299036,18.437642955396036,6.553649956786564e-76
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.corpus-callosum-]",-0.6492834065799462,0.03886102578929908,-16.707829847320586,1.1494310635538803e-62
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.cerebellum-R]",0.6055625991550336,0.038861025789299036,15.582774434168034,9.532590073947087e-55
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-long-gyrus-L]",0.5871432836235162,0.038861025789299064,15.108795295496149,1.4170680839382153e-51
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.cerebellum-L]",0.5744128631420388,0.038861025789298995,14.781206915547056,1.9366446760938626e-49
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-anterior-temporal-lobe-lateral-part-R]",0.5160607937632313,0.038861025789299036,13.279649295962136,3.03813723318612e-40
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-anterior-temporal-lobe-lateral-part-L]",0.46390374711688587,0.038861025789299064,11.937506478396367,7.545132926913013e-33
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-subgenual-frontal-cortex-L]",0.41485705303707765,0.03886102578929904,10.675401500886645,1.326826826790382e-26
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-posterior-long-gyrus-R]",0.38828525296938277,0.03886102578929908,9.991636738428621,1.658208035200625e-23
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-anterior-temporal-lobe-medial-part-L]",-0.3541133944610517,0.03886102578929904,-9.112301779706549,8.065234423982614e-20
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-posterior-long-gyrus-L]",0.3247484382747534,0.03886102578929906,8.356661505424738,6.451808352782476e-17
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-inferior-cortex-L]",0.27662837461729584,0.03886102578929906,7.118401251607451,1.0918611946695403e-12
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-fusiform-gyrus-R]",0.2696526754441554,0.03886102578929904,6.93889751923142,3.951716551420386e-12
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-fusiform-gyrus-L]",0.25936785938374396,0.03886102578929899,6.674241199653692,2.4851460453959082e-11
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-amygdala-L]",-0.2575557896072924,0.038861025789299015,-6.627611710605292,3.411614396519382e-11
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-anterior-temporal-lobe-medial-part-R]",-0.2500043065305032,0.03886102578929904,-6.433291490708554,1.2486985227520381e-10
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-inferior-cortex-R]",0.23744448594605055,0.038861025789299064,6.11009311060014,9.957302978130427e-10
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-amygdala-R]",-0.23231828243173347,0.038861025789299036,-5.978181937124927,2.256416500777258e-09
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.brainstem-excluding-substantia-nigra-]",0.20441308376124437,0.038861025789299064,5.260105198188886,1.4397300959588524e-07
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-superior-temporal-gyrus-anterior-part-L]",-0.2040718447276211,0.03886102578929903,-5.2513241887664055,1.5100962744117626e-07
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-superior-temporal-gyrus-anterior-part-R]",-0.0961275949715939,0.03886102578929907,-2.473624744050477,0.013375010139690472
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-lateral-orbital-gyrus-L]",0.17259497745552066,0.07005771055021971,2.463611444050813,0.013754512861952936
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.CG-anterior-cingulate-gyrus-R]",0.16703304929801577,0.0700577105502197,2.384220780070752,0.017115330752810156
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-angular-gyrus-L]",0.15901674266829802,0.07005771055021968,2.269796449518709,0.023219936102731244
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-supramarginal-gyrus-L]",0.15549216488223716,0.0700577105502197,2.2194868153845135,0.026453623219188923
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-pre-subgenual-frontal-cortex-R]",0.15413956375920201,0.0700577105502197,2.2001798595560675,0.027794136662375648
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-middle-frontal-gyrus-L]",0.14541174358636477,0.07005771055021971,2.0755994228804946,0.037931014868026455
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-short-gyrus-L]",0.13941492181033888,0.07005771055021968,1.9900011107328672,0.04659081314466454
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-superior-temporal-gyrus-anterior-part-L]",0.13869705544180355,0.0700577105502197,1.9797543247203444,0.04773114101622415
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-inferior-frontal-gyrus-L]",0.13603814613452359,0.07005771055021971,1.9418011959869412,0.052161172050214845
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-subcallosal-area-R]",0.07542946545286047,0.03886102578929902,1.9410055169884664,0.05225760819337278
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-short-gyrus-R]",0.1269372251793014,0.07005771055021968,1.8118951387700373,0.07000240068832778
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-middle-and-inferior-temporal-gyrus-L]",0.12536494770269535,0.07005771055021971,1.7894525344619927,0.07354196521006037
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.corpus-callosum-]",0.12403374943697787,0.07005771055021974,1.7704510818700858,0.07665202662612607
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.cerebellum-R]",-0.12132717058373099,0.0700577105502197,-1.7318175205962467,0.08330605762716459
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-subgenual-frontal-cortex-R]",0.11993035202643199,0.07005771055021968,1.7118794074845187,0.08691889433430741
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.CG-anterior-cingulate-gyrus-L]",0.1161242166356573,0.07005771055021971,1.6575508352134285,0.0974081601556438
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-subcallosal-area-L]",0.11073644431615859,0.0700577105502197,1.5806460623171381,0.11395898750131703
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.CG-posterior-cingulate-gyrus-L]",0.11002998050961299,0.07005771055021971,1.5705620358624168,0.11628441409126017
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.caudate-nucleus-R]",0.10637700347885137,0.0700577105502197,1.518419637801278,0.12890864419448012
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-posterior-temporal-lobe-L]",0.10618325109081495,0.07005771055021975,1.5156540266142322,0.1296068581767466
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.caudate-nucleus-L]",0.10584572522497349,0.07005771055021974,1.510836200522135,0.13083018899331975
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-cuneus-R]",-0.10583569334323406,0.07005771055021968,-1.5106930059806556,0.1308666851858487
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-cuneus-L]",-0.1044779870864595,0.07005771055021968,-1.4913131797472345,0.1358792902505565
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-anterior-orbital-gyrus-L]",0.10406699144323794,0.07005771055021973,1.4854466499963515,0.13742554587122827
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-subgenual-frontal-cortex-L]",0.10183750053424423,0.0700577105502197,1.4536230164307713,0.14605085210378946
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-subcallosal-area-R]",0.09613296668987514,0.0700577105502197,1.3721968065308647,0.17000217930156747
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.CG-posterior-cingulate-gyrus-R]",0.091836597125043,0.07005771055021971,1.3108706579729215,0.18990146558126086
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-middle-short-gyrus-R]",0.08903807192908397,0.07005771055021968,1.270924659538489,0.20375545268655437
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-posterior-orbital-gyrus-L]",0.0889792078186421,0.0700577105502197,1.2700844363856116,0.20405455487338242
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-superior-frontal-gyrus-L]",0.08855364013032363,0.07005771055021968,1.2640099060451804,0.20622647143776218
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-parahippocampal-and-ambient-gyrus-L]",-0.04604276376967456,0.03886102578929901,-1.1848056718655418,0.2360942895270277
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-superior-frontal-gyrus-R]",0.08172968848679407,0.0700577105502197,1.166605186565546,0.24336984783876425
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-middle-short-gyrus-L]",0.07822498736977401,0.07005771055021971,1.1165792709383462,0.26417425883812606
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-long-gyrus-R]",0.07805224928143362,0.07005771055021968,1.1141136167372068,0.26523044771773363
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-inferior-cortex-L]",0.07758538966829864,0.0700577105502197,1.1074496876783155,0.2680995534795425
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.cerebellum-L]",-0.07741779885643951,0.07005771055021971,-1.1050575054253855,0.26913467229394983
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-inferior-frontal-gyrus-R]",0.07658637237836186,0.07005771055021971,1.0931897685046699,0.2743104883504517
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-anterior-temporal-lobe-lateral-part-L]",0.07589404931156818,0.07005771055021968,1.0833075862101547,0.2786719191680783
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-superior-temporal-gyrus-middle-part-L]",0.07305699096528184,0.0700577105502197,1.042811567656242,0.29703557276780623
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-lateral-orbital-gyrus-R]",0.07162599385010682,0.07005771055021968,1.0223855916439482,0.30659843721411983
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-supramarginal-gyrus-R]",0.07157352720212506,0.07005771055021968,1.0216366855268386,0.306952887782568
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-angular-gyrus-R]",0.07116964773388357,0.07005771055021973,1.0158717316756558,0.30969047178283504
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-postcentral-gyrus-L]",0.07036140260123658,0.0700577105502197,1.0043348840353437,0.31521722471223024
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-superior-temporal-gyrus-anterior-part-R]",0.07024251640004908,0.0700577105502197,1.0026379087808888,0.31603559823157523
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-straight-gyrus-L]",0.06906607351326022,0.07005771055021973,0.9858454261612122,0.3242089705226606
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-middle-frontal-gyrus-R]",0.06842854197308024,0.07005771055021971,0.9767453351766094,0.32869524499843283
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-subgenual-frontal-cortex-R]",0.03784733368773219,0.038861025789299036,0.9739149422595534,0.3300987739339748
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-posterior-long-gyrus-R]",0.06477935417336045,0.07005771055021971,0.924657024395972,0.35514434060650024
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-middle-and-inferior-temporal-gyrus-R]",0.06461136557973746,0.0700577105502197,0.9222591642274961,0.35639340892634896
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-straight-gyrus-R]",0.06451522085955219,0.07005771055021968,0.9208867996522031,0.3571095310766774
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-medial-orbital-gyrus-L]",0.06349005492775406,0.0700577105502197,0.9062536361681741,0.36480161951047074
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-precentral-gyrus-L]",0.061804449758897095,0.07005771055021973,0.8821933984638791,0.3776722312786406
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.brainstem-excluding-substantia-nigra-]",-0.060445287332782316,0.07005771055021971,-0.8627927869474569,0.38825140570212147
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.Lateral-ventricle-excluding-temporal-horn-R]",0.05986293056660741,0.07005771055021974,0.8544802577254595,0.3928389435958062
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.pallidum-L]",-0.0592242035759305,0.07005771055021974,-0.84536310294463,0.39790813862715435
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-inferior-cortex-R]",0.05731002833954946,0.0700577105502197,0.8180402683651462,0.4133341941249067
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.Lateral-ventricle-excluding-temporal-horn-L]",0.05559848167866088,0.07005771055021971,0.7936097431960188,0.4274226585837769
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-posterior-orbital-gyrus-R]",0.054732981138525316,0.07005771055021967,0.7812556349424367,0.43465215781453836
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-posterior-short-gyrus-R]",0.05370968919590391,0.07005771055021968,0.7666492206793287,0.4432901024729117
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-superior-parietal-gyrus-L]",0.05328598227083314,0.07005771055021971,0.7606012507736171,0.4468952724667392
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-anterior-long-gyrus-L]",0.05065040923351227,0.0700577105502197,0.7229812227050207,0.4696914205114364
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.Lateral-ventricle-temporal-horn-R]",-0.05022767121904159,0.07005771055021971,-0.716947082977208,0.4734067487275748
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-superior-temporal-gyrus-middle-part-R]",0.04855965092028547,0.07005771055021967,0.6931378507648536,0.48822304599991573
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-anterior-orbital-gyrus-R]",0.0473840679010985,0.07005771055021971,0.6763576418491726,0.4988136037864481
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-lingual-gyrus-R]",-0.04654303404319671,0.0700577105502197,-0.6643527697045297,0.5064645541405237
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-pre-subgenual-frontal-cortex-L]",0.044895212854989985,0.0700577105502197,0.6408318585119565,0.5216319317611386
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-posterior-temporal-lobe-R]",0.04338893589213633,0.07005771055021973,0.6193313419945928,0.5356981011501772
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-lingual-gyrus-L]",-0.04336640548806325,0.07005771055021968,-0.6190097442161885,0.5359099396504738
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-anterior-temporal-lobe-medial-part-L]",0.042957473032358084,0.07005771055021967,0.6131726642931723,0.5397621775005429
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-lateral-remainder-occipital-lobe-R]",-0.041414578048896034,0.07005771055021971,-0.5911494641151409,0.5544202798447884
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.nucleus-accumbens-R]",0.03675167010889835,0.07005771055021974,0.5245913664642738,0.5998672897591204
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-medial-orbital-gyrus-R]",0.03569194568630374,0.0700577105502197,0.5094649169375662,0.6104263834337311
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-parahippocampal-and-ambient-gyrus-R]",0.03348471606893488,0.07005771055021968,0.4779590398537493,0.6326793585681985
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-anterior-temporal-lobe-medial-part-R]",0.032473677958958946,0.07005771055021968,0.4635275361400904,0.6429862819843308
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-subcallosal-area-L]",0.017393609255151904,0.03886102578929904,0.4475849235030098,0.6544527858750881
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.FL-precentral-gyrus-R]",0.03128961865340174,0.07005771055021973,0.446626337167731,0.6551448762357848
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-fusiform-gyrus-R]",0.029432506698585992,0.07005771055021971,0.42011802080640054,0.6743992386431608
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-fusiform-gyrus-L]",0.026869129901857747,0.07005771055021971,0.38352851800084237,0.7013279294989141
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.thalamus-L]",0.025498916569976604,0.0700577105502197,0.36397016644867564,0.7158802873825281
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.nucleus-accumbens-L]",0.02482466233586844,0.0700577105502197,0.3543458977020566,0.7230796748084887
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-posterior-long-gyrus-L]",0.022954640296554474,0.07005771055021971,0.3276533034875557,0.7431738143065929
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.putamen-L]",-0.022726985629054952,0.07005771055021971,-0.324403772983182,0.7456323636445541
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-hippocampus-L]",-0.012574464709095734,0.038861025789299015,-0.3235752133068579,0.7462596561135166
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-hippocampus-L]",0.021217518280412295,0.07005771055021968,0.3028577170703127,0.76199829576526
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-parahippocampal-and-ambient-gyrus-L]",0.020975310198125596,0.07005771055021971,0.2994004519044309,0.7646345174018854
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-superior-parietal-gyrus-R]",0.019122102775767424,0.07005771055021971,0.2729478686298214,0.7848932891892251
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.insula-posterior-short-gyrus-L]",0.015602468379896872,0.0700577105502197,0.22270879618186357,0.8237621549288234
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.OL-lateral-remainder-occipital-lobe-L]",0.015114376080291758,0.07005771055021967,0.21574179289597648,0.8291890222392726
+"C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-parahippocampal-and-ambient-gyrus-R]",0.00789854107380264,0.03886102578929901,0.20325096709046797,0.838938878130298
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-amygdala-R]",-0.01401345685409483,0.07005771055021971,-0.20002733095380723,0.8414592060406054
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.Lateral-ventricle-temporal-horn-L]",-0.013532448913847417,0.07005771055021971,-0.19316144943313418,0.8468325290168103
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.pallidum-R]",-0.007489206920276215,0.07005771055021974,-0.1069005375919,0.9148678866995391
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.PL-postcentral-gyrus-R]",0.006015217359535141,0.0700577105502197,0.08586088971924415,0.9315770021360539
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-anterior-temporal-lobe-lateral-part-R]",0.005856702665221314,0.07005771055021967,0.08359825948098942,0.9333758508267368
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.putamen-R]",-0.003969947469633306,0.07005771055021971,-0.0566668170919961,0.9548106076474251
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.thalamus-R]",-0.0023693712925904054,0.07005771055021975,-0.03382027865286804,0.97302046516808
+"C(group, Treatment(reference=""Controls""))[T.LC]:C(ROI, Treatment(reference=""TL-hippocampus-R""))[T.TL-amygdala-L]",0.00018860389288277712,0.07005771055021973,0.0026921218435703733,0.9978520001398273
+Intercept,1.4708567529194279,236916.80586756032,6.208325946035489e-06,0.9999950464725793
+C(site)[T.CEUNIM],0.6592594398191611,546952.8351309149,1.2053314243473394e-06,0.9999990382846659
+"C(group, Treatment(reference=""Controls""))[T.LC]",0.3413312289938522,461401.3556990432,7.397707544155792e-07,0.9999994097483366
+C(sex)[T.1],0.08974169741442124,233742.69755121166,3.8393369441952026e-07,0.9999996936652329
+age_c,0.052256653414264026,,,
+Group Var,0.0,,,

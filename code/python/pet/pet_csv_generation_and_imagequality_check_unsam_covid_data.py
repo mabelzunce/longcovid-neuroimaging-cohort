@@ -18,6 +18,9 @@ pet_mri = True  # Set to True if you want to preprocess PET data with MRI
 pet_covid_unsam_path = '/home/martin/data_imaging/CovidProject/FullStudy/PET//'
 preprocessed_path = os.path.join(pet_covid_unsam_path, 'preprocessed')
 preprocessed_with_mri_path = os.path.join(pet_covid_unsam_path, 'ProcesadosCOVID_PET_MRI_09_2025')
+
+subjects_to_exclude = ['CP0106']  # List of subjects to exclude from processing
+
 # Output path for checked data
 checked_path = os.path.join(preprocessed_path, 'checked')
 os.makedirs(checked_path, exist_ok=True)
@@ -45,7 +48,7 @@ df_summary_suvr_mean = pd.DataFrame()
 df_summary_suvr_cerebellum = pd.DataFrame()
 
 # Get all subject folders
-subject_dirs = sorted([d for d in os.listdir(preprocessed_path) if d.startswith('CP')])
+subject_dirs = sorted([d for d in os.listdir(preprocessed_path) if d.startswith('CP') and d not in subjects_to_exclude])
 for subject in subject_dirs:
     subject_nifti_path = os.path.join(preprocessed_path, subject)
     
