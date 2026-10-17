@@ -221,8 +221,20 @@ def harmonize_suvr(df_input, reference_group='CEUNIM'):
     return df_harmonized
 
 # Harmonize the SUVR values for each structure in the summary_suvr_mean and summary_suvr_cerebellum dataframes
-df_summary_suvr_mean_harmonized = harmonize_suvr(df_summary_suvr_mean, reference_group='CEUNIM')
-df_summary_suvr_cerebellum_harmonized = harmonize_suvr(df_summary_suvr_cerebellum, reference_group='CEUNIM')
+# To harmonise use only controls for ceunim, because if not we are confounding site with LC groups
+# We create a df only with the controls, harmonise and replace in the original dataframe
+df_summary_suvr_mean_controls = df_summary_suvr_mean.loc[df_summary_suvr_mean["group"].eq("Controls")].copy()
+df_summary_suvr_mean_harmonized = harmonize_suvr(df_summary_suvr_mean_controls, reference_group='CEUNIM')
+# Concat the harmonized controls with the original non-control data to get the full harmonized dataframe
+df_summary_suvr_mean_non_controls = df_summary_suvr_mean.loc[~df_summary_suvr_mean["group"].eq("Controls")].copy()
+df_summary_suvr_mean_harmonized = pd.concat([df_summary_suvr_mean_harmonized, df_summary_suvr_mean_non_controls], ignore_index=True)
+
+# Now harmonize the cerebellum SUVR values using only the controls for CEUNIM
+df_summary_suvr_cerebellum_controls = df_summary_suvr_cerebellum.loc[df_summary_suvr_cerebellum["group"].eq("Controls")].copy()
+df_summary_suvr_cerebellum_harmonized = harmonize_suvr(df_summary_suvr_cerebellum_controls, reference_group='CEUNIM')
+df_summary_suvr_cerebellum_non_controls = df_summary_suvr_cerebellum.loc[~df_summary_suvr_cerebellum["group"].eq("Controls")].copy()
+df_summary_suvr_cerebellum_harmonized = pd.concat([df_summary_suvr_cerebellum_harmonized, df_summary_suvr_cerebellum_non_controls], ignore_index=True)
+
 # Write the harmonized summary dataframes to csv files
 df_summary_suvr_mean_harmonized.to_csv(os.path.join(merged_summary_csv_path, 'summary_suvr_mean_harmonized.csv'), index=False)
 df_summary_suvr_cerebellum_harmonized.to_csv(os.path.join(merged_summary_csv_path, 'summary_suvr_cerebellum_harmonized.csv'), index=False)
