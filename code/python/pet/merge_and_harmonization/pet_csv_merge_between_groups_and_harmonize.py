@@ -209,7 +209,6 @@ def harmonize_suvr(df_input, reference_group='CEUNIM'):
     covars['SITE'] = covars['SITE'].astype('category')
     covars['sex'] = covars['sex'].astype(float)
     covars['age'] = pd.to_numeric(covars['age'], errors='coerce')
-    covars['weight'] = pd.to_numeric(covars['weight'], errors='coerce')
 
     # Write covars for debugging
     covars.to_csv(os.path.join(merged_summary_csv_path, 'covars_for_harmonization.csv'), index=False)
