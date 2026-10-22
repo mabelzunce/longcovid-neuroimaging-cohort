@@ -1,4 +1,11 @@
 roi,category
+brainstem-excluding-substantia-nigra-,Brainstem
+Lateral-ventricle-excluding-temporal-horn-L,CSF/Ventricles
+Lateral-ventricle-excluding-temporal-horn-R,CSF/Ventricles
+Lateral-ventricle-temporal-horn-L,CSF/Ventricles
+Lateral-ventricle-temporal-horn-R,CSF/Ventricles
+cerebellum-L,Cerebellum
+cerebellum-R,Cerebellum
 FL-anterior-orbital-gyrus-L,Frontal
 FL-anterior-orbital-gyrus-R,Frontal
 FL-inferior-frontal-gyrus-L,Frontal
@@ -39,30 +46,13 @@ insula-posterior-long-gyrus-L,Limbic
 insula-posterior-long-gyrus-R,Limbic
 insula-posterior-short-gyrus-L,Limbic
 insula-posterior-short-gyrus-R,Limbic
+corpus-callosum-,Not gray matter
 OL-cuneus-L,Occipital
 OL-cuneus-R,Occipital
 OL-lateral-remainder-occipital-lobe-L,Occipital
 OL-lateral-remainder-occipital-lobe-R,Occipital
 OL-lingual-gyrus-L,Occipital
 OL-lingual-gyrus-R,Occipital
-Lateral-ventricle-excluding-temporal-horn-L,Other (subcortical/CSF/infratentorial)
-Lateral-ventricle-excluding-temporal-horn-R,Other (subcortical/CSF/infratentorial)
-Lateral-ventricle-temporal-horn-L,Other (subcortical/CSF/infratentorial)
-Lateral-ventricle-temporal-horn-R,Other (subcortical/CSF/infratentorial)
-brainstem-excluding-substantia-nigra-,Other (subcortical/CSF/infratentorial)
-caudate-nucleus-L,Other (subcortical/CSF/infratentorial)
-caudate-nucleus-R,Other (subcortical/CSF/infratentorial)
-cerebellum-L,Other (subcortical/CSF/infratentorial)
-cerebellum-R,Other (subcortical/CSF/infratentorial)
-corpus-callosum-,Other (subcortical/CSF/infratentorial)
-nucleus-accumbens-L,Other (subcortical/CSF/infratentorial)
-nucleus-accumbens-R,Other (subcortical/CSF/infratentorial)
-pallidum-L,Other (subcortical/CSF/infratentorial)
-pallidum-R,Other (subcortical/CSF/infratentorial)
-putamen-L,Other (subcortical/CSF/infratentorial)
-putamen-R,Other (subcortical/CSF/infratentorial)
-thalamus-L,Other (subcortical/CSF/infratentorial)
-thalamus-R,Other (subcortical/CSF/infratentorial)
 PL-angular-gyrus-L,Parietal
 PL-angular-gyrus-R,Parietal
 PL-postcentral-gyrus-L,Parietal
@@ -71,6 +61,16 @@ PL-superior-parietal-gyrus-L,Parietal
 PL-superior-parietal-gyrus-R,Parietal
 PL-supramarginal-gyrus-L,Parietal
 PL-supramarginal-gyrus-R,Parietal
+caudate-nucleus-L,Subcortical
+caudate-nucleus-R,Subcortical
+nucleus-accumbens-L,Subcortical
+nucleus-accumbens-R,Subcortical
+pallidum-L,Subcortical
+pallidum-R,Subcortical
+putamen-L,Subcortical
+putamen-R,Subcortical
+thalamus-L,Subcortical
+thalamus-R,Subcortical
 TL-amygdala-L,Temporal
 TL-amygdala-R,Temporal
 TL-anterior-temporal-lobe-lateral-part-L,Temporal

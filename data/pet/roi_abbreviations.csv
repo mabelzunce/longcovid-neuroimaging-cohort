@@ -1,0 +1,93 @@
+roi_full,abbreviation,full_name,category
+brainstem-excluding-substantia-nigra-,BStem,Brainstem (excl. substantia nigra),Brainstem
+Lateral-ventricle-excluding-temporal-horn-L,LVex-L,Lateral ventricle (excl. temporal horn) (L),CSF/Ventricles
+Lateral-ventricle-excluding-temporal-horn-R,LVex-R,Lateral ventricle (excl. temporal horn) (R),CSF/Ventricles
+Lateral-ventricle-temporal-horn-L,LVth-L,"Lateral ventricle, temporal horn (L)",CSF/Ventricles
+Lateral-ventricle-temporal-horn-R,LVth-R,"Lateral ventricle, temporal horn (R)",CSF/Ventricles
+cerebellum-L,Cereb-L,Cerebellum (L),Cerebellum
+cerebellum-R,Cereb-R,Cerebellum (R),Cerebellum
+FL-anterior-orbital-gyrus-L,AOrG-L,Anterior orbital gyrus (L),Frontal
+FL-anterior-orbital-gyrus-R,AOrG-R,Anterior orbital gyrus (R),Frontal
+FL-inferior-frontal-gyrus-L,IFG-L,Inferior frontal gyrus (L),Frontal
+FL-inferior-frontal-gyrus-R,IFG-R,Inferior frontal gyrus (R),Frontal
+FL-lateral-orbital-gyrus-L,LOrG-L,Lateral orbital gyrus (L),Frontal
+FL-lateral-orbital-gyrus-R,LOrG-R,Lateral orbital gyrus (R),Frontal
+FL-middle-frontal-gyrus-L,MFG-L,Middle frontal gyrus (L),Frontal
+FL-middle-frontal-gyrus-R,MFG-R,Middle frontal gyrus (R),Frontal
+FL-medial-orbital-gyrus-L,MOrG-L,Medial orbital gyrus (L),Frontal
+FL-medial-orbital-gyrus-R,MOrG-R,Medial orbital gyrus (R),Frontal
+FL-posterior-orbital-gyrus-L,POrG-L,Posterior orbital gyrus (L),Frontal
+FL-posterior-orbital-gyrus-R,POrG-R,Posterior orbital gyrus (R),Frontal
+FL-pre-subgenual-frontal-cortex-L,PSgFC-L,Pre-subgenual frontal cortex (L),Frontal
+FL-pre-subgenual-frontal-cortex-R,PSgFC-R,Pre-subgenual frontal cortex (R),Frontal
+FL-precentral-gyrus-L,PrCG-L,Precentral gyrus (L),Frontal
+FL-precentral-gyrus-R,PrCG-R,Precentral gyrus (R),Frontal
+FL-superior-frontal-gyrus-L,SFG-L,Superior frontal gyrus (L),Frontal
+FL-superior-frontal-gyrus-R,SFG-R,Superior frontal gyrus (R),Frontal
+FL-subgenual-frontal-cortex-L,SgFC-L,Subgenual frontal cortex (L),Frontal
+FL-subgenual-frontal-cortex-R,SgFC-R,Subgenual frontal cortex (R),Frontal
+FL-straight-gyrus-L,StrG-L,Straight gyrus (gyrus rectus) (L),Frontal
+FL-straight-gyrus-R,StrG-R,Straight gyrus (gyrus rectus) (R),Frontal
+FL-subcallosal-area-L,SubCA-L,Subcallosal area (L),Frontal
+FL-subcallosal-area-R,SubCA-R,Subcallosal area (R),Frontal
+CG-anterior-cingulate-gyrus-L,ACgG-L,Anterior cingulate gyrus (L),Limbic
+CG-anterior-cingulate-gyrus-R,ACgG-R,Anterior cingulate gyrus (R),Limbic
+CG-posterior-cingulate-gyrus-L,PCgG-L,Posterior cingulate gyrus (L),Limbic
+CG-posterior-cingulate-gyrus-R,PCgG-R,Posterior cingulate gyrus (R),Limbic
+insula-anterior-long-gyrus-L,aLIns-L,"Insula, anterior long gyrus (L)",Limbic
+insula-anterior-long-gyrus-R,aLIns-R,"Insula, anterior long gyrus (R)",Limbic
+insula-anterior-short-gyrus-L,aSIns-L,"Insula, anterior short gyrus (L)",Limbic
+insula-anterior-short-gyrus-R,aSIns-R,"Insula, anterior short gyrus (R)",Limbic
+insula-anterior-inferior-cortex-L,aiIns-L,"Insula, anterior inferior cortex (L)",Limbic
+insula-anterior-inferior-cortex-R,aiIns-R,"Insula, anterior inferior cortex (R)",Limbic
+insula-middle-short-gyrus-L,mSIns-L,"Insula, middle short gyrus (L)",Limbic
+insula-middle-short-gyrus-R,mSIns-R,"Insula, middle short gyrus (R)",Limbic
+insula-posterior-long-gyrus-L,pLIns-L,"Insula, posterior long gyrus (L)",Limbic
+insula-posterior-long-gyrus-R,pLIns-R,"Insula, posterior long gyrus (R)",Limbic
+insula-posterior-short-gyrus-L,pSIns-L,"Insula, posterior short gyrus (L)",Limbic
+insula-posterior-short-gyrus-R,pSIns-R,"Insula, posterior short gyrus (R)",Limbic
+corpus-callosum-,CC,Corpus callosum,Not gray matter
+OL-cuneus-L,Cun-L,Cuneus (L),Occipital
+OL-cuneus-R,Cun-R,Cuneus (R),Occipital
+OL-lateral-remainder-occipital-lobe-L,LatOL-L,Lateral occipital lobe (remainder) (L),Occipital
+OL-lateral-remainder-occipital-lobe-R,LatOL-R,Lateral occipital lobe (remainder) (R),Occipital
+OL-lingual-gyrus-L,LiG-L,Lingual gyrus (L),Occipital
+OL-lingual-gyrus-R,LiG-R,Lingual gyrus (R),Occipital
+PL-angular-gyrus-L,AnG-L,Angular gyrus (L),Parietal
+PL-angular-gyrus-R,AnG-R,Angular gyrus (R),Parietal
+PL-postcentral-gyrus-L,PoCG-L,Postcentral gyrus (L),Parietal
+PL-postcentral-gyrus-R,PoCG-R,Postcentral gyrus (R),Parietal
+PL-supramarginal-gyrus-L,SMG-L,Supramarginal gyrus (L),Parietal
+PL-supramarginal-gyrus-R,SMG-R,Supramarginal gyrus (R),Parietal
+PL-superior-parietal-gyrus-L,SPG-L,Superior parietal gyrus (L),Parietal
+PL-superior-parietal-gyrus-R,SPG-R,Superior parietal gyrus (R),Parietal
+caudate-nucleus-L,Caud-L,Caudate nucleus (L),Subcortical
+caudate-nucleus-R,Caud-R,Caudate nucleus (R),Subcortical
+nucleus-accumbens-L,NAcc-L,Nucleus accumbens (L),Subcortical
+nucleus-accumbens-R,NAcc-R,Nucleus accumbens (R),Subcortical
+pallidum-L,Pall-L,Pallidum (L),Subcortical
+pallidum-R,Pall-R,Pallidum (R),Subcortical
+putamen-L,Put-L,Putamen (L),Subcortical
+putamen-R,Put-R,Putamen (R),Subcortical
+thalamus-L,Thal-L,Thalamus (L),Subcortical
+thalamus-R,Thal-R,Thalamus (R),Subcortical
+TL-amygdala-L,Amyg-L,Amygdala (L),Temporal
+TL-amygdala-R,Amyg-R,Amygdala (R),Temporal
+TL-fusiform-gyrus-L,FuG-L,Fusiform gyrus (L),Temporal
+TL-fusiform-gyrus-R,FuG-R,Fusiform gyrus (R),Temporal
+TL-hippocampus-L,Hipp-L,Hippocampus (L),Temporal
+TL-hippocampus-R,Hipp-R,Hippocampus (R),Temporal
+TL-middle-and-inferior-temporal-gyrus-L,MITG-L,Middle and inferior temporal gyrus (L),Temporal
+TL-middle-and-inferior-temporal-gyrus-R,MITG-R,Middle and inferior temporal gyrus (R),Temporal
+TL-parahippocampal-and-ambient-gyrus-L,PHG-L,Parahippocampal and ambient gyrus (L),Temporal
+TL-parahippocampal-and-ambient-gyrus-R,PHG-R,Parahippocampal and ambient gyrus (R),Temporal
+TL-posterior-temporal-lobe-L,PTL-L,Posterior temporal lobe (L),Temporal
+TL-posterior-temporal-lobe-R,PTL-R,Posterior temporal lobe (R),Temporal
+TL-superior-temporal-gyrus-anterior-part-L,aSTG-L,"Superior temporal gyrus, anterior part (L)",Temporal
+TL-superior-temporal-gyrus-anterior-part-R,aSTG-R,"Superior temporal gyrus, anterior part (R)",Temporal
+TL-anterior-temporal-lobe-lateral-part-L,latATL-L,"Anterior temporal lobe, lateral part (L)",Temporal
+TL-anterior-temporal-lobe-lateral-part-R,latATL-R,"Anterior temporal lobe, lateral part (R)",Temporal
+TL-superior-temporal-gyrus-middle-part-L,mSTG-L,"Superior temporal gyrus, middle part (L)",Temporal
+TL-superior-temporal-gyrus-middle-part-R,mSTG-R,"Superior temporal gyrus, middle part (R)",Temporal
+TL-anterior-temporal-lobe-medial-part-L,medATL-L,"Anterior temporal lobe, medial part (L)",Temporal
+TL-anterior-temporal-lobe-medial-part-R,medATL-R,"Anterior temporal lobe, medial part (R)",Temporal
