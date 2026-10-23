@@ -1,0 +1,87 @@
+neurocloud_roi,hammers_roi
+Parte anterior del cingulo_LH,CG-anterior-cingulate-gyrus-L
+Parte anterior del cingulo_RH,CG-anterior-cingulate-gyrus-R
+Parte posterior del cingulo_LH,CG-posterior-cingulate-gyrus-L
+Parte posterior del cingulo_RH,CG-posterior-cingulate-gyrus-R
+Giro orbitario anterior_LH,FL-anterior-orbital-gyrus-L
+Giro orbitario anterior_RH,FL-anterior-orbital-gyrus-R
+Giro frontal inferior area de Brocca_LH,FL-inferior-frontal-gyrus-L
+Giro frontal inferior area de Brocca_RH,FL-inferior-frontal-gyrus-R
+Giro orbitario lateral_LH,FL-lateral-orbital-gyrus-L
+Giro orbitario lateral_RH,FL-lateral-orbital-gyrus-R
+Giro orbitario medial_LH,FL-medial-orbital-gyrus-L
+Giro orbitario medial_RH,FL-medial-orbital-gyrus-R
+Giro Frontal medial_LH,FL-middle-frontal-gyrus-L
+Giro Frontal medial_RH,FL-middle-frontal-gyrus-R
+Giro orbitario posterior_LH,FL-posterior-orbital-gyrus-L
+Giro orbitario posterior_RH,FL-posterior-orbital-gyrus-R
+Giro recto_LH,FL-pre-subgenual-frontal-cortex-L
+Giro recto_RH,FL-pre-subgenual-frontal-cortex-R
+Giro precentral_LH,FL-precentral-gyrus-L
+Giro precentral_RH,FL-precentral-gyrus-R
+Giro recto_LH,FL-straight-gyrus-L
+Giro recto_RH,FL-straight-gyrus-R
+Giro precentral_LH,FL-subcallosal-area-L
+Giro precentral_RH,FL-subcallosal-area-R
+Cingulado anterior area subgenual_LH,FL-subgenual-frontal-cortex-L
+Cingulado anterior area subgenual_RH,FL-subgenual-frontal-cortex-R
+Giro frontal superior_LH,FL-superior-frontal-gyrus-L
+Giro frontal superior_RH,FL-superior-frontal-gyrus-R
+Cuneus_LH,OL-cuneus-L
+Cuneus_RH,OL-cuneus-R
+Remanente lateral del lobulo occipital_LH,OL-lateral-remainder-occipital-lobe-L
+Remanente lateral del lobulo occipital_RH,OL-lateral-remainder-occipital-lobe-R
+Giro lingual_LH,OL-lingual-gyrus-L
+Giro lingual_RH,OL-lingual-gyrus-R
+Remanente lateral inferior del lobulo parietal_LH,PL-angular-gyrus-L
+Remanente lateral inferior del lobulo parietal_RH,PL-angular-gyrus-R
+Giro postcentral_LH,PL-postcentral-gyrus-L
+Giro postcentral_RH,PL-postcentral-gyrus-R
+Precuneus_LH,PL-superior-parietal-gyrus-L
+Precuneus_RH,PL-superior-parietal-gyrus-R
+Remanente lateral inferior del lobulo parietal_LH,PL-supramarginal-gyrus-L
+Remanente lateral inferior del lobulo parietal_RH,PL-supramarginal-gyrus-R
+Amigdala_LH,TL-amygdala-L
+Amigdala_RH,TL-amygdala-R
+Temporal anterior lateral_LH,TL-anterior-temporal-lobe-lateral-part-L
+Temporal anterior lateral_RH,TL-anterior-temporal-lobe-lateral-part-R
+Temporal anterior medial_LH,TL-anterior-temporal-lobe-medial-part-L
+Temporal anterior medial_RH,TL-anterior-temporal-lobe-medial-part-R
+Giro fusiforme_LH,TL-fusiform-gyrus-L
+Giro fusiforme_RH,TL-fusiform-gyrus-R
+Hipocampo_LH,TL-hippocampus-L
+Hipocampo_RH,TL-hippocampus-R
+Temporal medio e inferior_LH,TL-middle-and-inferior-temporal-gyrus-L
+Temporal medio e inferior_RH,TL-middle-and-inferior-temporal-gyrus-R
+Parahipocampo_LH,TL-parahippocampal-and-ambient-gyrus-L
+Parahipocampo_RH,TL-parahippocampal-and-ambient-gyrus-R
+Temporal posterior_LH,TL-posterior-temporal-lobe-L
+Temporal posterior_RH,TL-posterior-temporal-lobe-R
+Primer giro temporal zona anterior_LH,TL-superior-temporal-gyrus-anterior-part-L
+Primer giro temporal zona anterior_RH,TL-superior-temporal-gyrus-anterior-part-R
+Temporal superior zona posterior_LH,TL-superior-temporal-gyrus-middle-part-L
+Temporal superior zona posterior_RH,TL-superior-temporal-gyrus-middle-part-R
+Nucleos caudados_LH,caudate-nucleus-L
+Nucleos caudados_RH,caudate-nucleus-R
+Cerebelo_LH,cerebellum-L
+Cerebelo_RH,cerebellum-R
+Insula_LH,insula-anterior-inferior-cortex-L
+Insula_RH,insula-anterior-inferior-cortex-R
+Insula_LH,insula-anterior-long-gyrus-L
+Insula_RH,insula-anterior-long-gyrus-R
+Insula_LH,insula-anterior-short-gyrus-L
+Insula_RH,insula-anterior-short-gyrus-R
+Insula_LH,insula-middle-short-gyrus-L
+Insula_RH,insula-middle-short-gyrus-R
+Insula_LH,insula-posterior-long-gyrus-L
+Insula_RH,insula-posterior-long-gyrus-R
+Insula_LH,insula-posterior-short-gyrus-L
+Insula_RH,insula-posterior-short-gyrus-R
+Nucleos caudados_LH,nucleus-accumbens-L
+Nucleos caudados_RH,nucleus-accumbens-R
+Putamenes_LH,pallidum-L
+Putamenes_RH,pallidum-R
+Putamenes_LH,putamen-L
+Putamenes_RH,putamen-R
+Talamos_LH,thalamus-L
+Talamos_RH,thalamus-R
