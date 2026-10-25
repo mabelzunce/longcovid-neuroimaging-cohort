@@ -26,6 +26,8 @@ output_path = os.path.join('./results/pet/paper_analysis/', 'neurocloud/')
 os.makedirs(output_path, exist_ok=True)
 os.makedirs(output_summary_path, exist_ok=True)
 
+#subjects to exlcude
+subjects_to_exclude = ["CP0106"]  # Example subjects to exclude
 # Load rois to lobe mapping
 rois_to_lobe = pd.read_csv(rois_to_lobe_csv)
 
@@ -36,7 +38,7 @@ plt.rcParams['figure.figsize'] = (12, 6)
 
 def load_long_zscores(base_dir,
                       csv_rel_path=("data_es", "es", "rois_analysis.csv"),
-                      sep=';'):
+                      sep=';', subjects_to_exclude=None):
     """
     Load ROI z-scores from multiple subjects and return a long-format DataFrame.
 
@@ -62,6 +64,9 @@ def load_long_zscores(base_dir,
         subj_path = os.path.join(base_dir, subj)
 
         if not os.path.isdir(subj_path):
+            continue
+
+        if subjects_to_exclude is not None and subj in subjects_to_exclude:
             continue
 
         csv_path = os.path.join(subj_path, *csv_rel_path)
@@ -274,7 +279,7 @@ def compute_roi_stats(df_wide, min_n=10):
             "STD_Z": std_z,
             "COHEN_D": cohen_d,
             "TSTAT": tstat,
-            "PVAL_T": pval_one,
+            "PVAL_T": pval_two, # 2 sided test
             "WSTAT": wstat,
             "PVAL_W": pval_w
         })
@@ -420,7 +425,7 @@ def volcano_plot(
 
 # main
 
-df_long_covid = load_long_zscores(paths_neurocloud_reports)
+df_long_covid = load_long_zscores(paths_neurocloud_reports, subjects_to_exclude=subjects_to_exclude)
 
 # Pivot to wide format: one row per SUBJECT, one column per ROI_NAME and hemisphere
 # (e.g. "Hipocampo_LH", "Hipocampo_RH")
