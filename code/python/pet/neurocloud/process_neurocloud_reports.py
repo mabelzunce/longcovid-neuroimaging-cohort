@@ -457,8 +457,21 @@ df_long_covid.to_csv(os.path.join(output_path, "ttest_neurocloud_long_covid.csv"
 
 # Change the names to the standard hammers names in the nerucloud output
 neurocloud_to_hammers_df = pd.read_csv(os.path.join('./data/pet/', 'neurocloud_to_hammers_rois_match.csv'))
-rename_dict = dict(zip(neurocloud_to_hammers_df["neurocloud_roi"], neurocloud_to_hammers_df["hammers_roi"]))
-df_long_covid["Region"] = df_long_covid["Region"].map(rename_dict).fillna(df_long_covid["Region"])
+#rename_dict = dict(zip(neurocloud_to_hammers_df["neurocloud_roi"], neurocloud_to_hammers_df["hammers_roi"]))
+for roi in df_long_covid["Region"]:
+    # look for the corresponding hammers name, allowing for multiple matches and taking all of them, repeating the rows in this case
+    hammers_name = neurocloud_to_hammers_df.loc[neurocloud_to_hammers_df["neurocloud_roi"] == roi, "hammers_roi"]
+    if not hammers_name.empty:
+        if len(hammers_name) > 1:
+            # If there are multiple matches, repeat the row for each match
+            for name in hammers_name.values:
+                new_row = df_long_covid.loc[df_long_covid["Region"] == roi].copy()
+                new_row["Region"] = name
+                df_long_covid = pd.concat([df_long_covid, new_row], ignore_index=True)
+            # Drop the original row with the neurocloud name
+            df_long_covid = df_long_covid[df_long_covid["Region"] != roi]
+        else:
+            df_long_covid.loc[df_long_covid["Region"] == roi, "Region"] = hammers_name.values[0]
 
 df_long_covid.to_csv(
     os.path.join(output_path, "ttest_neurocloud_long_covid_hammers_names.csv"),
