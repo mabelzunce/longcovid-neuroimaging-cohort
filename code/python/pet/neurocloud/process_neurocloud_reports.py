@@ -21,10 +21,10 @@ paths_neurocloud_reports = "/home/martin/data_imaging/CovidProject/FullStudy/PET
 #paths_informes_covid =  "/content/drive/MyDrive/NeurocloudPET/InformesNeurocloud"
 #paths_informes_fleni = "/content/drive/MyDrive/NeurocloudPET/InformesNeurocloudFleni"
 rois_to_lobe_csv = os.path.join('./data/pet/', 'hammers_roi_to_lobe.csv')
-output_path = os.path.join('./data/processed_pet/', 'neurocloud/')
-plots_path = os.path.join('./results/pet/', 'neurocloud/')
+output_summary_path = os.path.join('./data/processed_pet/', 'neurocloud/')
+output_path = os.path.join('./results/pet/paper_analysis/', 'neurocloud/')
 os.makedirs(output_path, exist_ok=True)
-os.makedirs(plots_path, exist_ok=True)
+os.makedirs(output_summary_path, exist_ok=True)
 
 # Load rois to lobe mapping
 rois_to_lobe = pd.read_csv(rois_to_lobe_csv)
@@ -215,7 +215,7 @@ def add_fdr(df, alpha=0.05):
     """
 
     reject, pval_fdr, _, _ = multipletests(
-        df["PVAL_TWO"],
+        df["PVAL_T"].values,
         alpha=alpha,
         method="fdr_bh"
     )
@@ -434,7 +434,7 @@ df_wide_covid.columns = [f"{roi}_{hemi}" for roi, hemi in df_wide_covid.columns]
 df_wide_covid = df_wide_covid.reset_index()
 
 # Save the raw data for neurocloud long covid z-scores:
-df_wide_covid.to_csv(os.path.join(output_path, "neurocloud_long_covid_zscores.csv"), index=False)
+df_wide_covid.to_csv(os.path.join(output_summary_path, "neurocloud_long_covid_zscores.csv"), index=False)
 
 # Do the ttest and wilcoxon test for each ROI, and compute Cohen's d
 df_long_covid = compute_roi_stats(df_wide_covid.set_index("SUBJECT"))
@@ -443,6 +443,9 @@ df_long_covid = classify_effect(df_long_covid)
 
 # Sort using p-value and Cohen's d
 df_long_covid = df_long_covid.sort_values(by=["PVAL_T", "COHEN_D"], ascending=[True, False])
+
+# Now add fdr:
+df_long_covid = add_fdr(df_long_covid, alpha=0.05)
 
 df_long_covid.to_csv(os.path.join(output_path, "ttest_neurocloud_long_covid.csv"), index=False)
 
@@ -465,6 +468,8 @@ volcano_plot(
     sesoi=0.5,
     title="Volcano plot – Long COVID (Wilcoxon)"
 )
+# save figures
+plt.savefig(os.path.join(output_path, "volcano_plot_long_covid_wilcoxon.png"), dpi=300)
 
 volcano_plot(
     df=df_long_covid,
@@ -475,3 +480,5 @@ volcano_plot(
     X_label = "Cohen D",
     title="Volcano plot – Long COVID (Test T)"
 )
+
+plt.savefig(os.path.join(output_path, "volcano_plot_long_covid_ttest.png"), dpi=300)
