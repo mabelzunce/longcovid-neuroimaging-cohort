@@ -217,3 +217,48 @@ plt.savefig(
     bbox_inches="tight"
 )
 plt.close()
+
+
+# Now plot a plot_glass_brain for ceunim effect sizes
+path_plot_glass_brain = os.path.join(
+    plots_dir,
+    "consensus_with_ceunim_effect_glass_brain.png"
+)
+plotting.plot_glass_brain(
+    path_zmap,
+    display_mode="lyrz",
+    colorbar=True,
+    cmap=cmap_blue_white_red,
+    threshold=0.0,
+    vmax=1.5,
+    vmin=-1.5,
+    black_bg=False,
+)
+plt.savefig(
+    path_plot_glass_brain,
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.close()
+
+# Now plot a plot_glass_brain for cermep effect sizes
+path_plot_glass_brain = os.path.join(
+    plots_dir,
+    "consensus_with_cermep_effect_glass_brain.png"
+)
+plotting.plot_glass_brain(
+    path_zmap,
+    display_mode="lyrz",
+    colorbar=True,
+    cmap=cmap_blue_white_red,
+    threshold=0.0,
+    vmax=1.5,
+    vmin=-1.5,
+    black_bg=False,
+)
+plt.savefig(
+    path_plot_glass_brain,
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.close()

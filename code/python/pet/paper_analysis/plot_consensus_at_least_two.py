@@ -164,8 +164,8 @@ plotting.plot_stat_map(
     display_mode="ortho",
     cut_coords=(18, 4, 19),
     threshold=0.0,
-    vmax=1.5,
-    vmin=-1.5,
+    vmax=0.4,
+    vmin=-0.4,
     black_bg=False,
     annotate=False,
     dim=0,
@@ -203,8 +203,8 @@ plotting.plot_stat_map(
     display_mode="ortho",
     cut_coords=(18, 4, 19),
     threshold=0.0,
-    vmax=1.5,
-    vmin=-1.5,
+    vmax=0.4,
+    vmin=-0.4,
     black_bg=False,
     annotate=False,
     dim=0,
@@ -217,3 +217,105 @@ plt.savefig(
     bbox_inches="tight"
 )
 plt.close()
+
+# Now plot a plot_glass_brain for ceunim effect sizes
+path_plot_glass_brain = os.path.join(
+    plots_dir,
+    "consensus_at_least_two_with_ceunim_effect_glass_brain.png"
+)
+plotting.plot_glass_brain(
+    path_zmap,
+    display_mode="lyrz",
+    colorbar=True,
+    cmap=cmap_blue_white_red,
+    threshold=0.0,
+    vmax=0.4,
+    vmin=-0.4,
+    black_bg=False,
+    plot_abs=False
+)
+plt.savefig(
+    path_plot_glass_brain,
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.close()
+
+# Now plot a plot_glass_brain for cermep effect sizes
+path_plot_glass_brain = os.path.join(
+    plots_dir,
+    "consensus_at_least_two_with_cermep_effect_glass_brain.png"
+)
+plotting.plot_glass_brain(
+    path_zmap,
+    display_mode="lyrz",
+    colorbar=True,
+    cmap=cmap_blue_white_red,
+    threshold=0.0,
+    vmax=0.4,
+    vmin=-0.4,
+    black_bg=False,
+    plot_abs=False
+)
+plt.savefig(
+    path_plot_glass_brain,
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.close()
+
+# Plot a surface representation of the CEUNIM effect sizes
+from neuromaps.datasets import fetch_fslr
+from neuromaps.transforms import mni152_to_fslr
+from surfplot import Plot
+
+# Project Hammers ROI labels to fsLR 32k without averaging integer labels
+lh_gii, rh_gii = mni152_to_fslr(
+    path_hammers, 
+    fslr_density="32k", 
+    method="nearest"
+)
+lh_parc = lh_gii.agg_data()
+rh_parc = rh_gii.agg_data()
+surfaces = fetch_fslr(density="32k")
+lh_surf, rh_surf = surfaces["inflated"]
+
+# Map each projected ROI to its CEUNIM effect size
+ceunim_effects_by_label = {}
+for label, effect_size in zip(labels, consensus_df["ceunim_beta"].values):
+    label_id = label_name_to_id.get(label)
+    if label_id is not None:
+        ceunim_effects_by_label[label_id] = effect_size
+
+lh_effects = np.full(lh_parc.shape, np.nan, dtype=np.float32)
+rh_effects = np.full(rh_parc.shape, np.nan, dtype=np.float32)
+for label_id, effect_size in ceunim_effects_by_label.items():
+    lh_effects[lh_parc == label_id] = effect_size
+    rh_effects[rh_parc == label_id] = effect_size
+
+# Initialize surfplot and render effect sizes with the volume-plot color scale
+p = Plot(lh_surf, rh_surf, views=["lateral", "medial"])
+p.add_layer(
+    {"left": lh_effects, "right": rh_effects},
+    cmap=cmap_blue_white_red,
+    color_range=(-0.4, 0.4),
+    cbar=True,
+    cbar_label="CEUNIM effect size",
+    zero_transparent=False
+)
+
+# Add outlines to retain the Hammers ROI boundaries
+#p.add_layer(
+#    {"left": lh_parc, "right": rh_parc},
+#    cmap="gray",
+#    as_outline=True,
+#    cbar=False
+#)
+
+fig = p.build()
+fig.show()
+fig.savefig(
+    os.path.join(plots_dir, "consensus_at_least_two_with_ceunim_effect_surface.png"),
+    dpi=300,
+    bbox_inches="tight"
+)
