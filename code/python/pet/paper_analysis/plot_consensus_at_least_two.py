@@ -178,6 +178,45 @@ plt.savefig(
     bbox_inches="tight"
 )
 plt.close()
+# Same but wiht p values instead of effect sizes for CEUNIM
+array_zmap = np.zeros_like(array_hammers, dtype=np.float32)
+effect_sizes = consensus_df['ceunim_p_fdr'].values # we use the FDR-corrected p values for ceunim effect sizes
+for label, effect_size in zip(labels, effect_sizes):
+    # get the label id from the label name:
+    label_id = label_name_to_id.get(label, None)
+    if label_id is not None:
+        array_zmap[array_hammers == label_id] = effect_size
+zmap_image = sitk.GetImageFromArray(array_zmap)
+zmap_image.CopyInformation(resampled_hammers)
+# Changed output format from .png to .nii.gz to support float data
+path_zmap = os.path.join(plots_dir, "consensus_at_least_two_map_ceunim_p_fdr.nii.gz")
+sitk.WriteImage(zmap_image, path_zmap)
+path_plot_zscores = os.path.join(
+    plots_dir,
+    "consensus_at_least_two_with_ceunim_p_fdr.png"
+)
+plotting.plot_stat_map(
+    path_zmap,
+    bg_img=path_mni_152,
+    cmap=cmap_blue_white_red,
+    display_mode="ortho",
+    cut_coords=(18, 4, 19),
+    threshold=0.0,
+    vmax=0.1,
+    vmin=-0.1,
+    black_bg=False,
+    annotate=False,
+    dim=0,
+    alpha=1.0
+)
+
+plt.savefig(
+    path_plot_zscores,
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.close()
+
 
 # Plot cermep effect sizes
 array_zmap = np.zeros_like(array_hammers, dtype=np.float32)
@@ -300,7 +339,7 @@ p.add_layer(
     cmap=cmap_blue_white_red,
     color_range=(-0.4, 0.4),
     cbar=True,
-    cbar_label="CEUNIM effect size",
+    cbar_label=r"$\beta_{group}$",
     zero_transparent=False
 )
 
